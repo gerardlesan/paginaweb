@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    rollupOptions: {
+    rolldownOptions: {
       input: ['src/index.html', 'src/howls/index.html', 'src/silentvoice/index.html'],
     },
   },
