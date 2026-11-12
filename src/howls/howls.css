@@ -1,0 +1,10 @@
+.hero {
+    display: grid;
+    
+    max-height: 70vh;
+    background-image:
+        linear-gradient(to left, transparent 40%, #eee),
+        url(../img/howls/s049.jpg);
+    background-size: cover;
+    background-position: center;
+}
