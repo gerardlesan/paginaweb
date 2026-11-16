@@ -1,0 +1,250 @@
+.hero { /* Configura la portada a pantalla completa con una imagen de fondo.*/
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  background-image: url('/public/silentvoice/s01.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #111;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.hero nav {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.hero nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero nav a {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero nav li:nth-child(2) a {
+  background: #111;
+  color: #fff;
+}
+
+.hero h1 {
+  margin-top: 80px;
+  font-weight: normal;
+}
+
+/* Texto en japonés vertical */
+.hero h1 [lang="ja"] {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  position: absolute;
+  left: 40px;
+  top: 130px;
+}
+
+/* Título "A Silent Voice" */
+.hero h1 {
+  font-size: 4rem;
+  font-family: serif;
+  font-weight: normal;
+  margin-left: 80px; /* Separado del texto japonés vertical */
+  margin-top: 120px;
+}
+
+.hero .scores {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px 25px;
+  border-radius: 8px;
+}
+
+.hero .scores dt {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.hero .scores dd {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hero .stars {
+  color: #f59e0b; /* Color dorado para las estrellas */
+  letter-spacing: 2px;
+}
+
+.hero .art-carousel, 
+.hero-poster-flotante {
+  position: absolute;
+  right: 60px;
+  top: 100px;
+  width: 320px;
+  background: white;
+  padding: 12px 12px 35px 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: rotate(4deg);
+  border-radius: 6px;
+}
+
+.hero .art-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.character {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.character-img {
+  background: white;
+  padding: 10px 10px 25px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: rotate(-3deg); /* Inclina la tarjeta ligeramente */
+  flex-shrink: 0;
+}
+
+.character:nth-child(even) .character-img {
+  transform: rotate(3deg); 
+}
+
+.character-img img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.character-info {
+  flex-grow: 1;
+}
+
+.character-info h3 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #33a6cc; 
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.character-age {
+  color: #d97706;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #bbe5f2; 
+  padding-bottom: 5px;
+}
+
+.character-info p {
+  border-bottom: 1px solid #bbe5f2; 
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* --- Estilos para la sección de Also In the Film (Panel de personajes) --- */
+.other-characters {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.other-characters h2 {
+  font-size: 2.2rem;
+  font-family: serif;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.other-characters-panel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.other-characters-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.movie-outro {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+}
+
+.outro-image img {
+  max-width: 650px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.outro-title {
+  margin-top: 25px;
+}
+
+.outro-title [lang="ja"] {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.outro-title p {
+  font-family: serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+.outro-button-container {
+  margin-top: 30px;
+}
+
+.outro-btn {
+  display: inline-block;
+  background-color: #8ac3ed;
+  color: #111;
+  padding: 12px 30px;
+  border-radius: 30px; /* Forma de píldora */
+  text-decoration: none;
+  font-family: serif;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.outro-btn:hover {
+  background-color: #72b2e5;
+  transform: translateY(-2px);
+}
