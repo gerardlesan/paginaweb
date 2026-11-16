@@ -6,7 +6,7 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
     rolldownOptions: {
-      input: ['src/index.html', 'src/howls/index.html', 'src/silentvoice/index.html'],
+      input: ['src/index.html', 'src/howls/index.html', 'src/silentvoice/index.html', 'src/comparison/index.html'],
     },
   },
 })
