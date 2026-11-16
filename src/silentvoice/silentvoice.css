@@ -1,8 +1,8 @@
 .hero { /* Configura la portada a pantalla completa con una imagen de fondo.*/
   position: relative;
   width: 100%;
-  min-height: 100vh; 
-  background-image: url('/public/silentvoice/s01.jpg');
+  min-height: 100vh;
+  background-image: url('/img/silentvoice/s01.jpg');
   background-size: cover;
   background-position: center;
   padding: 40px;
@@ -96,7 +96,7 @@
   letter-spacing: 2px;
 }
 
-.hero .art-carousel, 
+.hero .art-carousel,
 .hero-poster-flotante {
   position: absolute;
   right: 60px;
@@ -132,7 +132,7 @@
 }
 
 .character:nth-child(even) .character-img {
-  transform: rotate(3deg); 
+  transform: rotate(3deg);
 }
 
 .character-img img {
@@ -147,7 +147,7 @@
 
 .character-info h3 {
   font-size: 1.8rem;
-  border-bottom: 2px solid #33a6cc; 
+  border-bottom: 2px solid #33a6cc;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
@@ -156,12 +156,12 @@
   color: #d97706;
   font-weight: bold;
   margin-bottom: 10px;
-  border-bottom: 1px dashed #bbe5f2; 
+  border-bottom: 1px dashed #bbe5f2;
   padding-bottom: 5px;
 }
 
 .character-info p {
-  border-bottom: 1px solid #bbe5f2; 
+  border-bottom: 1px solid #bbe5f2;
   padding-bottom: 8px;
   margin-bottom: 8px;
   line-height: 1.6;

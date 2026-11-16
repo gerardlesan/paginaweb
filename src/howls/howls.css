@@ -5,26 +5,14 @@ body {
   font-family: "Alegreya Sans", sans-serif;
 }
 
-/*
-  Fonts
-  - Two Google Fonts, loaded by the <link> at the top of index.html.
-  - Alegreya Sans (simple, no serifs) for normal text, set on body above.
-  - Alegreya (an old storybook serif) for the titles.
-*/
+/* Fonts */
 h1,
 h2,
 h3 {
   font-family: "Alegreya", serif;
 }
 
-/*
-  Title
-  - The Japanese name is small, on its own line (display: block),
-    with wide spacing between the letters.
-  - The English name is huge. "Castle" is inside an <em>, so it is
-    already italic; display: block puts it on a new line and
-    padding-left pushes it a bit to the right.
-*/
+/* Title  */
 .hero h1 {
   margin: 20px 0px 0px 30px;
   font-weight: normal;
@@ -48,14 +36,7 @@ h3 {
   padding-left: 1em;
 }
 
-/*
-  Stars
-  - Five ★ characters. The text itself is made transparent, and the
-    background shows through the shape of the letters (background-clip: text).
-  - The background is orange up to the rating and grey after it.
-    --rating comes from the HTML (style="--rating: 85").
-    calc(var(--rating) * 1%) turns 85 into 85%, so 85/100 fills 4¼ stars.
-*/
+/*  Stars */
 .stars {
   margin-right: 10px;
   background: linear-gradient(
@@ -65,7 +46,6 @@ h3 {
   );
   background-clip: text;
   color: transparent;
-  /* A shadow would be painted over the clipped background and muddy the stars. */
   text-shadow: none;
 }
 .hero {
@@ -84,7 +64,6 @@ h3 {
     url(../img/howls/s049.jpg);
   background-size: cover;
   background-position: center;
-  /* Keeps the white text readable where the black fades out over bright sky. */
   text-shadow: 0px 1px 8px rgb(0 0 0 / 0.6);
 }
 
@@ -104,13 +83,7 @@ h3 {
   grid-area: info;
 }
 
-/*
-  Poster
-  - Bigger, and pushed towards the center with a right margin.
-  - Rounded corners and a drop shadow that grows on hover.
-  - .shine is a white diagonal stripe on top of the image. It is invisible
-    until you hover the poster. howls.ts does the tilt.
-*/
+/* Poster */
 .poster {
   position: relative;
   align-self: center;
@@ -131,13 +104,7 @@ h3 {
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6);
 }
 
-/*
-  Navigation
-  - A dark blue pill with a thin light border. Its padding leaves a small
-    gap between the border and the links.
-  - Every link is also a pill. The current page (aria-current="page")
-    is filled white with dark text; the other link has white text.
-*/
+/* Navigation */
 .navigation ul {
   display: flex;
   width: fit-content;
@@ -181,11 +148,7 @@ h3 {
   flex-direction: column-reverse;
 }
 
-/*
-  Scores and facts text
-  - The score values are big, in the title font.
-  - Every label (dt) is small and a lighter blue-grey, so the values stand out.
-*/
+/* Scores and facts text */
 .scores dd {
   font-family: "Alegreya", serif;
   font-size: 2rem;
@@ -207,11 +170,7 @@ h2 {
   font-size: 2.5rem;
 }
 
-/*
-  Sinopsis
-  - Blue band, the blue of the door knob that opens onto Porthaven.
-  - Picture and text side by side, each taking half the width.
-*/
+/* Sinopsis */
 .sinopsis {
   padding: 40px 0px;
   background-color: #2b5fa8;
@@ -248,16 +207,7 @@ h2 {
   line-height: 1.6;
 }
 
-/*
-  Art Oficial
-  - A dark red band with a row of images. howls.ts makes the row slide.
-  - The list is as wide as all its images together (max-content), and
-    .art hides whatever sticks out of the screen (overflow: hidden).
-  - Each image uses margin-right instead of the list using gap, and the list
-    has no side padding. That way every image takes exactly the same space,
-    and the loop in howls.ts has no visible jump.
-  - The top and bottom padding leaves room for the hover zoom.
-*/
+/* Art Oficial */
 .art {
   padding: 40px 0px;
   background-color: #5a1a1a;
@@ -293,22 +243,7 @@ h2 {
   transform: scale(1.08);
 }
 
-/*
-  Main Characters
-  - A green band. Each character is an arch picture next to a text column (flex).
-  - Both sides of the page get the same 70px of space, so nothing touches
-    the edge. The text column is 720px wide (less if the screen is too narrow,
-    because flex items can shrink) and sits right next to its picture, so the lines around the facts end with the text.
-  - Characters with the class "reverse" put the picture on the right
-    (row-reverse) and align their text to the right, facing the picture.
-    The facts list is flex, so text-align doesn't move it:
-    justify-content: flex-end pushes it to the right instead.
-  - flex-shrink: 0 stops the picture from getting squeezed by long text.
-  - The arch: big rounded top corners, square bottom corners, a dark green
-    frame and a shadow. object-fit: cover crops the image to fill the box.
-  - The facts list (dl) sits between two thin lines (border-top/bottom).
-    flex-wrap lets the facts go to a new line if they don't fit.
-*/
+/* Main Characters */
 .main-characters {
   padding: 40px 0px;
   background-color: #1b5e20;
@@ -382,12 +317,7 @@ h2 {
   line-height: 1.6;
 }
 
-/*
-  Small screens (narrower than 800px)
-  - Picture on top, text below and left-aligned, for every character
-    (also the reversed ones).
-  - Less space on the sides.
-*/
+/* Small screens */
 @media (max-width: 800px) {
   .title-en {
     font-size: 3.5rem;
@@ -432,14 +362,7 @@ h2 {
   }
 }
 
-/*
-  Also in the film
-  - Same green band, with a row of cards: arch picture, name, a small green
-    label and a short text.
-  - space-between pushes the first card to the left edge, the last one to the
-    right edge, and spreads the rest evenly in between.
-  - flex-wrap lets the cards go to a new line when the screen is narrow.
-*/
+/* Also in the film */
 .supporting-characters {
   padding: 40px 0px;
   background-color: #1b5e20;
@@ -484,11 +407,7 @@ h2 {
   line-height: 1.5;
 }
 
-/*
-  Ending
-  - The kiss scene (s047) behind a centered quote and a round button.
-  - The gradient on top of the image fades it into the page blue at the bottom.
-*/
+/* Ending */
 .ending {
   padding: 200px 20px;
   text-align: center;
