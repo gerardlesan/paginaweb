@@ -1,112 +1,203 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title></title>
-        <link rel="stylesheet" href="/howls/howls.css" />
-    </head>
-    <body>
-        <script type="module" src="/howls/howls.ts"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&family=Alegreya+Sans&display=swap" />
+  <link rel="stylesheet" href="/howls/howls.css" />
+  <script type="module" src="/howls/howls.ts"></script>
+</head>
+<body>
 
+<header class="hero">
+  <nav class="navigation">
+    <ul>
+      <li><a href="/howls/" aria-current="page">Howl's Moving Castle</a></li>
+      <li><a href="/silentvoice/">A Silent Voice</a></li>
+    </ul>
+  </nav>
 
+  <h1>
+    <span class="title-ja" lang="ja">ハウルの動く城</span>
+    <span class="title-en">Howl's Moving <em>Castle</em></span>
+  </h1>
 
-        <header class="hero">
-            <nav>
-                <ul>
-                    <li><a href="/silentvoice/">A silent voice</a></li>
-                    <li><a href="/howls/">Howl's Moving Castle</a></li>
-                </ul>
-            </nav>
+  <div class="poster">
+    <img src="/img/howls/poster.jpg" width="230" height="333" alt="Pòster de Howl's Moving Castle" />
+    <div class="shine"></div>
+  </div>
 
-            <h1>
-                <span lang="ja">ハウルの動く城 </span><br />Howl's Moving Castle
-            </h1>
-            <dl class="scores">
-                <dt>Nota mitjana</dt>
-                <dd>
-                    <span class="stars" style="--rating: 85">★★★★★</span> 85 / 100
-                </dd>
-                <dt>Película Més Popular a AniList</dt>
-                <dd>#7</dd>
-            </dl>
-            <dl class="facts">
-                <div>
-                    <dt>Director</dt>
-                    <dd>Hayao Miyazaki</dd>
-                </div>
-                <div>
-                    <dt>Estudi</dt>
-                    <dd>Studio Ghibli</dd>
-                </div>
-                <div>
-                    <dt>Estrena</dt>
-                    <dd>20 de Novembre de 2004</dd>
-                </div>
-                <div>
-                    <dt>Durada</dt>
-                    <dd>119 minuts</dd>
-                </div>
-                <div>
-                    <dt>Música</dt>
-                    <dd>Joe Hisaishi</dd>
-                </div>
-            </dl>
-        </header>
+  <dl class="scores">
+    <div>
+      <dt>Nota mitjana</dt>
+      <dd><span class="stars" style="--rating: 85" aria-hidden="true">★★★★★</span> 85 / 100</dd>
+    </div>
+    <div>
+      <dt>Pel·lícula Més Popular a AniList</dt>
+      <dd>#7</dd>
+    </div>
+  </dl>
 
-        <section class="art">
-            <h2>Art Oficial</h2>
-            <ul class="art-carousel">
-                <li>
-                    <figure>
-                        <img
-                            src="/img/howls/s015.jpg"
-                            width="500"
-                            height="300"
-                            alt="howls feeding "
-                        />
-                    </figure>
-                </li>
-            </ul>
-        </section>
+  <dl class="facts">
+    <div><dt>Director</dt> <dd>Hayao Miyazaki</dd></div>
+    <div><dt>Estudi</dt>   <dd>Studio Ghibli</dd></div>
+    <div><dt>Estrena</dt>  <dd>20 de Novembre de 2004</dd></div>
+    <div><dt>Durada</dt>   <dd>119 minuts</dd></div>
+    <div><dt>Música</dt>   <dd>Joe Hisaishi</dd></div>
+  </dl>
+</header>
 
-        <section>
-            <h2>Main Characters</h2>
-            <article class="character">
-                <img src="/img/howls/chars/sophie-hatter.jpg" width="230" height="345" alt="Sophie Hatter" />
-                <h3>Sophie Hatter</h3>
-                <p>Jove barretera convertida en anciana per la Bruixa dels Erms.</p>
-            </article>
-            <article class="character">
-                <img src="/img/howls/chars/howl.jpg" width="230" height="346" alt="Howl" />
-                <h3>Howl</h3>
-                <p>Mag poderós i vanitós, amo del castell ambulant.</p>
-            </article>
-            <article class="character">
-                <img src="/img/howls/chars/calcifer.jpg" width="230" height="345" alt="Calcifer" />
-                <h3>Calcifer</h3>
-                <p>Dimoni del foc que mou el castell, lligat a Howl per un pacte.</p>
-            </article>
-            <article class="character">
-                <img src="/img/howls/chars/markl.jpg" width="230" height="345" alt="Markl" />
-                <h3>Markl</h3>
-                <p>Jove aprenent de Howl.</p>
-            </article>
-            <article class="character">
-                <img src="/img/howls/chars/arechi-no-majo.png" width="230" height="360" alt="La Bruixa dels Erms" />
-                <h3>La Bruixa dels Erms</h3>
-                <p>Bruixa que maleeix la Sophie i persegueix en Howl.</p>
-            </article>
-            <article class="character">
-                <img src="/img/howls/chars/kakashi-no-kabu.jpg" width="230" height="365" alt="Cap de Nap" />
-                <h3>Cap de Nap</h3>
-                <p>Espantaocells saltador que ajuda la Sophie.</p>
-            </article>
-            <article class="character">
-                <img src="/img/howls/chars/suliman.png" width="230" height="346" alt="Madame Suliman" />
-                <h3>Madame Suliman</h3>
-                <p>Bruixa reial i antiga mestra de Howl.</p>
-            </article>
-        </section>
-    </body>
+<section class="sinopsis">
+  <h2>Sinopsis</h2>
+  <div>
+    <img src="/img/howls/s033.jpg" width="1920" height="1038" alt="La Sophie, ja anciana, abraçada per en Howl sota un cel de núvols" />
+    <div>
+      <h3>Una carta d'odi a l'apatia</h3>
+      <p>Quan la jove i insegura Sophie Hatter és maleïda per una bruixa gelosa, que la condemna a viure en el cos d'una anciana, la seva única oportunitat de trencar la maledicció és un mag jove, insegur i capriciós, el seu castell ambulant i la seva tripulació. Allà fa un tracte amb en Calcifer, el dimoni del foc que mou el castell: si ella trenca el pacte que el lliga a en Howl, ell li trencarà la maledicció. Mentrestant, el país s'enfonsa en una guerra en què el rei vol obligar en Howl a lluitar.</p>
+      <p>Paradoxalment, la maledicció l'allibera. Lluny de les expectatives que pesen sobre una noia jove, la Sophie es torna decidida i franca, i el seu cos canvia amb el seu estat d'ànim: rejoveneix quan se sent valenta o s'oblida de si mateixa, i envelleix quan torna a dubtar. La pel·lícula no presenta la vellesa com una desgràcia, sinó com una font de força i de saviesa.</p>
+      <p>Miyazaki va fer la pel·lícula indignat per la invasió de l'Iraq del 2003, i aquí la guerra és absurda i sense sentit. Cada nit en Howl es transforma en un ocell monstruós per combatre-la, i cada vegada li costa més tornar a ser humà: la guerra li fa perdre la humanitat. Fins i tot el seu pacifisme és ambigu, més fill de la vanitat i la por que d'una convicció, i la Sophie prefereix que continuï sent un covard abans que veure'l lluitar.</p>
+      <p>Al centre de tot hi ha el cor. En Howl el va donar a en Calcifer quan era petit i, sense ell, és un noi buit i vanitós. La Sophie l'estima tal com és, perquè estimar algú és veure'l de veritat, i en tornar-li el cor l'obliga a fer-se càrrec de la seva vida. Al seu voltant, una colla de marginats acaba formant una família. Segons el mateix Miyazaki, és una pel·lícula sobre per què val la pena viure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="art">
+  <h2>Art Oficial</h2>
+  <ul class="art-carousel">
+    <li><figure><img src="/img/howls/s015.jpg" width="500" height="300" alt="howls feeding " /></figure></li>
+    <li><figure><img src="/img/howls/s005.jpg" width="500" height="300" alt="" /></figure></li>
+    <li><figure><img src="/img/howls/s025.jpg" width="500" height="300" alt="" /></figure></li>
+    <li><figure><img src="/img/howls/s035.jpg" width="500" height="300" alt="" /></figure></li>
+    <li><figure><img src="/img/howls/s010.jpg" width="500" height="300" alt="" /></figure></li>
+    <li><figure><img src="/img/howls/s020.jpg" width="500" height="300" alt="" /></figure></li>
+    <li><figure><img src="/img/howls/s030.jpg" width="500" height="300" alt="" /></figure></li>
+    <li><figure><img src="/img/howls/s040.jpg" width="500" height="300" alt="" /></figure></li>
+  </ul>
+</section>
+
+<section class="main-characters">
+  <h2>Personatjes Principals</h2>
+
+  <article class="character">
+    <img src="/img/howls/portraits/sophie.jpg" width="600" height="798" alt="Sophie Hatter" />
+    <div>
+      <h3>Sophie Hatter</h3>
+      <p class="name-ja" lang="ja">ソフィー・ハッター</p>
+      <dl>
+        <div><dt>Edat</dt>         <dd class="age">18</dd></div>
+        <div><dt>Veu japonesa</dt> <dd>Chieko Baishō</dd></div>
+        <div><dt>Veu anglesa</dt>  <dd>Emily Mortimer, Jean Simmons</dd></div>
+      </dl>
+      <p>Jove barretera que treballa a la botiga del seu difunt pare. Es creu poc interessant i no espera gaire res de la vida.</p>
+      <p>La Bruixa dels Erms la converteix en una anciana de noranta anys. Lluny de casa, entra a treballar al castell d'en Howl, i el seu aspecte canvia segons com se sent.</p>
+    </div>
+  </article>
+
+  <article class="character reverse">
+    <img src="/img/howls/portraits/howl.jpg" width="600" height="798" alt="Howl" />
+    <div>
+      <h3>Howl</h3>
+      <p class="name-ja" lang="ja">ハウル</p>
+      <dl>
+        <div><dt>Edat</dt>         <dd class="age">27</dd></div>
+        <div><dt>Veu japonesa</dt> <dd>Takuya Kimura</dd></div>
+        <div><dt>Veu anglesa</dt>  <dd>Christian Bale</dd></div>
+      </dl>
+      <p>Mag poderós i vanitós, amo del castell ambulant. Diuen que roba el cor de les noies boniques.</p>
+      <p>Cada nit es converteix en un gran ocell negre per aturar la guerra, però cada vegada li costa més tornar a ser humà.</p>
+    </div>
+  </article>
+
+  <article class="character">
+    <img src="/img/howls/portraits/calcifer.jpg" width="600" height="798" alt="Calcifer" />
+    <div>
+      <h3>Calcifer</h3>
+      <p class="name-ja" lang="ja">カルシファー</p>
+      <dl>
+        <div><dt>Edat</dt>         <dd class="age">No consta</dd></div>
+        <div><dt>Veu japonesa</dt> <dd>Tatsuya Gashūin</dd></div>
+        <div><dt>Veu anglesa</dt>  <dd>Billy Crystal</dd></div>
+      </dl>
+      <p>Dimoni del foc que mou el castell, lligat a Howl per un pacte.</p>
+      <p>No pot sortir de la llar de foc fins que algú trenqui el pacte, i proposa un tracte a la Sophie: si ella l'allibera, ell li trencarà la maledicció.</p>
+    </div>
+  </article>
+
+  <article class="character reverse">
+    <img src="/img/howls/portraits/markl.jpg" width="600" height="798" alt="Markl" />
+    <div>
+      <h3>Markl</h3>
+      <p class="name-ja" lang="ja">マルクル</p>
+      <dl>
+        <div><dt>Edat</dt>         <dd class="age">Nen</dd></div>
+        <div><dt>Veu japonesa</dt> <dd>Ryūnosuke Kamiki</dd></div>
+        <div><dt>Veu anglesa</dt>  <dd>Josh Hutcherson</dd></div>
+      </dl>
+      <p>Jove aprenent d'en Howl, que atén els clients que truquen a la porta del castell.</p>
+      <p>Quan surt al carrer es posa una capa màgica que el converteix en un vell amb barba.</p>
+    </div>
+  </article>
+
+  <article class="character">
+    <img src="/img/howls/portraits/witch.jpg" width="600" height="798" alt="La Bruixa dels Erms" />
+    <div>
+      <h3>La Bruixa dels Erms</h3>
+      <p class="name-ja" lang="ja">荒地の魔女</p>
+      <dl>
+        <div><dt>Edat</dt>         <dd class="age">No consta</dd></div>
+        <div><dt>Veu japonesa</dt> <dd>Akihiro Miwa</dd></div>
+        <div><dt>Veu anglesa</dt>  <dd>Lauren Bacall</dd></div>
+      </dl>
+      <p>Bruixa enorme que viatja en un palanquí portat per homes de goma. Fa anys que vol el cor d'en Howl, i maleeix la Sophie per gelosia.</p>
+      <p>Quan la Suliman li treu la màgia, es torna una velleta fràgil i inofensiva, i la Sophie l'acull al castell.</p>
+    </div>
+  </article>
+</section>
+
+<section class="supporting-characters">
+  <h2>Also in the film</h2>
+  <ul>
+    <li>
+      <img src="/img/howls/chars/kokuou.jpg" width="230" height="345" alt="El Rei" />
+      <h3>El Rei</h3>
+      <p class="role">Adult</p>
+      <p>Rei del país, que porta el regne a la guerra contra el país veí.</p>
+    </li>
+    <li>
+      <img src="/img/howls/chars/suliman.png" width="230" height="345" alt="Madame Suliman" />
+      <h3>Madame Suliman</h3>
+      <p class="role">Gran</p>
+      <p>Bruixa reial i antiga mestra d'en Howl, que vol que ell serveixi el rei a la guerra.</p>
+    </li>
+    <li>
+      <img src="/img/howls/chars/heen.png" width="230" height="345" alt="Heen" />
+      <h3>Heen</h3>
+      <p class="role">Gos</p>
+      <p>Gos vell i esbufegant de la Suliman, que acaba vivint al castell.</p>
+    </li>
+    <li>
+      <img src="/img/howls/chars/lettie-hatter.png" width="230" height="345" alt="Lettie Hatter" />
+      <h3>Lettie Hatter</h3>
+      <p class="role">Jove</p>
+      <p>Germana petita de la Sophie, que treballa en una pastisseria del centre.</p>
+    </li>
+    <li>
+      <img src="/img/howls/chars/honey.jpg" width="230" height="345" alt="Honey" />
+      <h3>Honey</h3>
+      <p class="role">Adulta</p>
+      <p>Mare de la Sophie, que la visita al castell per encàrrec de la Suliman.</p>
+    </li>
+  </ul>
+</section>
+
+<footer class="ending">
+  <blockquote>
+    <p>“Un cor és una càrrega pesada”</p>
+    <cite>Sophie, a Howl</cite>
+  </blockquote>
+  <a href="/silentvoice/">A Silent Voice</a>
+</footer>
+
+</body>
 </html>

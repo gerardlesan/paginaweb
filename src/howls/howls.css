@@ -1,12 +1,517 @@
+body {
+  margin: 0px;
+  background-color: #1f307d;
+  color: white;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+/*
+  Fonts
+  - Two Google Fonts, loaded by the <link> at the top of index.html.
+  - Alegreya Sans (simple, no serifs) for normal text, set on body above.
+  - Alegreya (an old storybook serif) for the titles.
+*/
+h1,
+h2,
+h3 {
+  font-family: "Alegreya", serif;
+}
+
+/*
+  Title
+  - The Japanese name is small, on its own line (display: block),
+    with wide spacing between the letters.
+  - The English name is huge. "Castle" is inside an <em>, so it is
+    already italic; display: block puts it on a new line and
+    padding-left pushes it a bit to the right.
+*/
+.hero h1 {
+  margin: 20px 0px 0px 30px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.title-ja {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+}
+
+.title-en {
+  font-size: 6rem;
+}
+
+.title-en em {
+  display: block;
+  padding-left: 1em;
+}
+
+/*
+  Stars
+  - Five ★ characters. The text itself is made transparent, and the
+    background shows through the shape of the letters (background-clip: text).
+  - The background is orange up to the rating and grey after it.
+    --rating comes from the HTML (style="--rating: 85").
+    calc(var(--rating) * 1%) turns 85 into 85%, so 85/100 fills 4¼ stars.
+*/
+.stars {
+  margin-right: 10px;
+  background: linear-gradient(
+    to right,
+    orange calc(var(--rating) * 1%),
+    grey calc(var(--rating) * 1%)
+  );
+  background-clip: text;
+  color: transparent;
+  /* A shadow would be painted over the clipped background and muddy the stars. */
+  text-shadow: none;
+}
 .hero {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: ;
-    max-height: 70vh;
-    background-image:
-        linear-gradient(to left, transparent 40%, #eee),
-        url(../img/howls/s049.jpg);
-    background-size: cover;
-    background-position: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "nav     ."
+    "title   poster"
+    "reviews poster"
+    "info    .";
+  max-height: 70vh;
+  width: 100%;
+  background-image:
+    linear-gradient(to left, transparent 30%, rgb(0 0 0 / 0.65)),
+    url(../img/howls/s049.jpg);
+  background-size: cover;
+  background-position: center;
+  /* Keeps the white text readable where the black fades out over bright sky. */
+  text-shadow: 0px 1px 8px rgb(0 0 0 / 0.6);
+}
+
+.hero > .navigation {
+  grid-area: nav;
+}
+.hero > h1 {
+  grid-area: title;
+}
+.hero > .poster {
+  grid-area: poster;
+}
+.hero > .scores {
+  grid-area: reviews;
+}
+.hero > .facts {
+  grid-area: info;
+}
+
+/*
+  Poster
+  - Bigger, and pushed towards the center with a right margin.
+  - Rounded corners and a drop shadow that grows on hover.
+  - .shine is a white diagonal stripe on top of the image. It is invisible
+    until you hover the poster. howls.ts does the tilt.
+*/
+.poster {
+  position: relative;
+  align-self: center;
+  width: 300px;
+  margin: 30px 10vw 30px 0px;
+}
+
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.4s;
+}
+
+.poster:hover img {
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6);
+}
+
+/*
+  Navigation
+  - A dark blue pill with a thin light border. Its padding leaves a small
+    gap between the border and the links.
+  - Every link is also a pill. The current page (aria-current="page")
+    is filled white with dark text; the other link has white text.
+*/
+.navigation ul {
+  display: flex;
+  width: fit-content;
+  gap: 4px;
+  margin: 10px 10px;
+  padding: 4px;
+  list-style: none;
+  background-color: #14244f;
+  border: 1px solid #3a4f86;
+  border-radius: 999px;
+}
+
+.navigation a {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: white;
+  text-decoration: none;
+}
+
+.navigation [aria-current="page"] {
+  background-color: white;
+  color: #14244f;
+}
+
+.scores,
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 30px;
+}
+
+.scores dd,
+.facts dd {
+  margin: 0px;
+}
+
+.scores div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*
+  Scores and facts text
+  - The score values are big, in the title font.
+  - Every label (dt) is small and a lighter blue-grey, so the values stand out.
+*/
+.scores dd {
+  font-family: "Alegreya", serif;
+  font-size: 2rem;
+}
+
+.scores dt,
+.facts dt {
+  font-size: 0.85rem;
+  color: #c3cbe6;
+}
+
+.facts dt {
+  margin-bottom: 6px;
+}
+
+h2 {
+  margin: 0px 0px 30px 70px;
+  font-weight: normal;
+  font-size: 2.5rem;
+}
+
+/*
+  Sinopsis
+  - Blue band, the blue of the door knob that opens onto Porthaven.
+  - Picture and text side by side, each taking half the width.
+*/
+.sinopsis {
+  padding: 40px 0px;
+  background-color: #2b5fa8;
+}
+
+.sinopsis > div {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 0px 70px;
+}
+
+.sinopsis img {
+  box-sizing: border-box;
+  width: 50%;
+  height: auto;
+  border: 10px solid #1d4277;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.sinopsis > div > div {
+  flex: 1;
+}
+
+.sinopsis h3 {
+  margin: 0px 0px 24px;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.sinopsis p {
+  line-height: 1.6;
+}
+
+/*
+  Art Oficial
+  - A dark red band with a row of images. howls.ts makes the row slide.
+  - The list is as wide as all its images together (max-content), and
+    .art hides whatever sticks out of the screen (overflow: hidden).
+  - Each image uses margin-right instead of the list using gap, and the list
+    has no side padding. That way every image takes exactly the same space,
+    and the loop in howls.ts has no visible jump.
+  - The top and bottom padding leaves room for the hover zoom.
+*/
+.art {
+  padding: 40px 0px;
+  background-color: #5a1a1a;
+  overflow: hidden;
+}
+
+.art-carousel {
+  display: flex;
+  width: max-content;
+  margin: 0px;
+  padding: 30px 0px;
+  list-style: none;
+}
+
+.art-carousel li {
+  width: 450px;
+  margin-right: 24px;
+}
+
+.art-carousel figure {
+  margin: 0px;
+}
+
+.art-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.art-carousel img:hover {
+  transform: scale(1.08);
+}
+
+/*
+  Main Characters
+  - A green band. Each character is an arch picture next to a text column (flex).
+  - Both sides of the page get the same 70px of space, so nothing touches
+    the edge. The text column is 720px wide (less if the screen is too narrow,
+    because flex items can shrink) and sits right next to its picture, so the lines around the facts end with the text.
+  - Characters with the class "reverse" put the picture on the right
+    (row-reverse) and align their text to the right, facing the picture.
+    The facts list is flex, so text-align doesn't move it:
+    justify-content: flex-end pushes it to the right instead.
+  - flex-shrink: 0 stops the picture from getting squeezed by long text.
+  - The arch: big rounded top corners, square bottom corners, a dark green
+    frame and a shadow. object-fit: cover crops the image to fill the box.
+  - The facts list (dl) sits between two thin lines (border-top/bottom).
+    flex-wrap lets the facts go to a new line if they don't fit.
+*/
+.main-characters {
+  padding: 40px 0px;
+  background-color: #1b5e20;
+}
+
+.character {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 0px 0px 80px;
+  padding: 0px 70px;
+}
+
+.character.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.character.reverse dl {
+  justify-content: flex-end;
+}
+
+.character > div {
+  width: 720px;
+}
+
+.character img {
+  flex-shrink: 0;
+  width: 260px;
+  height: 346px;
+  object-fit: cover;
+  border: 8px solid #144617;
+  border-radius: 999px 999px 0px 0px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.character h3 {
+  margin: 0px;
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.character .name-ja {
+  margin: 8px 0px 24px;
+  font-style: italic;
+  color: #c5d9c6;
+}
+
+.character dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  margin: 0px 0px 24px;
+  padding: 16px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.character dt {
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: #c5d9c6;
+}
+
+.character dd {
+  margin: 0px;
+}
+
+.character p {
+  line-height: 1.6;
+}
+
+/*
+  Small screens (narrower than 800px)
+  - Picture on top, text below and left-aligned, for every character
+    (also the reversed ones).
+  - Less space on the sides.
+*/
+@media (max-width: 800px) {
+  .title-en {
+    font-size: 3.5rem;
+  }
+
+  .character,
+  .character.reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0px 20px;
+  }
+
+  .character > div {
+    width: auto;
+  }
+
+  .sinopsis > div {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0px 20px;
+  }
+
+  .sinopsis img {
+    width: 100%;
+  }
+
+  .character.reverse {
+    text-align: left;
+  }
+
+  .character.reverse dl {
+    justify-content: flex-start;
+  }
+
+  .supporting-characters ul {
+    padding: 0px 20px;
+  }
+
+  h2 {
+    margin-left: 20px;
+  }
+}
+
+/*
+  Also in the film
+  - Same green band, with a row of cards: arch picture, name, a small green
+    label and a short text.
+  - space-between pushes the first card to the left edge, the last one to the
+    right edge, and spreads the rest evenly in between.
+  - flex-wrap lets the cards go to a new line when the screen is narrow.
+*/
+.supporting-characters {
+  padding: 40px 0px;
+  background-color: #1b5e20;
+}
+
+.supporting-characters ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0px;
+  padding: 0px 70px;
+  list-style: none;
+}
+
+.supporting-characters li {
+  width: 220px;
+}
+
+.supporting-characters img {
+  display: block;
+  width: 220px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 999px 999px 0px 0px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.supporting-characters h3 {
+  margin: 16px 0px 4px;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.supporting-characters .role {
+  margin: 0px 0px 8px;
+  color: #a8e08a;
+}
+
+.supporting-characters p {
+  margin: 0px;
+  line-height: 1.5;
+}
+
+/*
+  Ending
+  - The kiss scene (s047) behind a centered quote and a round button.
+  - The gradient on top of the image fades it into the page blue at the bottom.
+*/
+.ending {
+  padding: 200px 20px;
+  text-align: center;
+  background-image: url(../img/howls/s050.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.ending blockquote {
+  margin: 0px 0px 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow:
+    0 0 20px rgb(0 0 0 / 0.9),
+    0 0 40px black,
+    0 0 80px black;
+}
+
+.ending a {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
 }
