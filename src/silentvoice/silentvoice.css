@@ -1,133 +1,254 @@
-.hero { /* Configura la portada a pantalla completa con una imagen de fondo.*/
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-image: url('/img/silentvoice/s01.jpg');
+body {
+  margin: 0px;
+  background-color: white;
+  color: #111;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+/* Fonts */
+h1,
+h2,
+h3 {
+  font-family: "Alegreya", serif;
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0px 0px 30px;
+  font-size: 2.5rem;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas:
+    "nav     ."
+    "title   poster"
+    "reviews poster"
+    "info    .";
+  min-height: 85vh;
+  background-image:
+    linear-gradient(to bottom, transparent 50%, white),
+    linear-gradient(to right, rgba(255, 255, 255, 0.85) 30%, transparent 60%),
+    url("/img/silentvoice/s01.jpg");
   background-size: cover;
   background-position: center;
-  padding: 40px;
-  box-sizing: border-box;
-  color: #111;
-  font-family: sans-serif;
-  overflow: hidden;
+  text-shadow: 0px 1px 8px white;
 }
 
-.hero nav {
-  position: absolute;
-  top: 30px;
-  left: 40px;
+.hero > .navigation {
+  grid-area: nav;
+}
+.hero > h1 {
+  grid-area: title;
+  align-self: end;
+}
+.hero > .poster {
+  grid-area: poster;
+}
+.hero > .scores {
+  grid-area: reviews;
+}
+.hero > .facts {
+  grid-area: info;
 }
 
-.hero nav ul {
+/* Navigation */
+.navigation {
+  text-shadow: none;
+}
+
+.navigation ul {
   display: flex;
-  gap: 10px;
+  width: fit-content;
+  gap: 4px;
+  margin: 20px 30px;
+  padding: 4px;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 999px;
 }
 
-.hero nav a {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  background: #ffffff;
+.navigation a {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 999px;
   color: #111;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  text-decoration: none;
 }
 
-.hero nav li:nth-child(2) a {
-  background: #111;
-  color: #fff;
+.navigation [aria-current="page"] {
+  background-color: #111;
+  color: white;
 }
 
+/* Title */
 .hero h1 {
-  margin-top: 80px;
-  font-weight: normal;
+  margin: 20px 0px 0px 30px;
+  font-size: 4rem;
+  line-height: 1.1;
 }
 
-/* Texto en japonés vertical */
 .hero h1 [lang="ja"] {
+  display: block;
+  margin-bottom: 20px;
   writing-mode: vertical-rl;
   text-orientation: upright;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
   font-size: 3.5rem;
-  line-height: 1.2;
-  position: absolute;
-  left: 40px;
-  top: 130px;
+  text-shadow:
+    0px 0px 6px white,
+    0px 0px 16px white;
 }
 
-/* Título "A Silent Voice" */
-.hero h1 {
-  font-size: 4rem;
-  font-family: serif;
-  font-weight: normal;
-  margin-left: 80px; /* Separado del texto japonés vertical */
-  margin-top: 120px;
-}
-
-.hero .scores {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 15px 25px;
-  border-radius: 8px;
-}
-
-.hero .scores dt {
-  font-size: 0.75rem;
-  color: #555;
-  margin-bottom: 2px;
-}
-
-.hero .scores dd {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.hero .stars {
-  color: #f59e0b; /* Color dorado para las estrellas */
-  letter-spacing: 2px;
-}
-
-.hero .art-carousel,
-.hero-poster-flotante {
-  position: absolute;
-  right: 60px;
-  top: 100px;
-  width: 320px;
-  background: white;
-  padding: 12px 12px 35px 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+/* Poster */
+.poster {
+  position: relative;
+  align-self: center;
+  width: 300px;
+  margin: 30px 10vw 30px 0px;
   transform: rotate(4deg);
-  border-radius: 6px;
 }
 
-.hero .art-carousel img {
+.poster img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Scores */
+.scores,
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 30px;
+}
+
+.scores dd,
+.facts dd {
+  margin: 0px;
+}
+
+.scores div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.scores dd {
+  font-family: "Alegreya", serif;
+  font-size: 2rem;
+}
+
+.scores dt,
+.facts dt {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.facts dt {
+  margin-bottom: 6px;
+}
+
+.stars {
+  margin-right: 10px;
+  color: orange;
+}
+
+/* Sinopsis */
+.sinopsis {
+  padding: 60px 12vw;
+}
+
+.sinopsis > div {
+  display: flow-root;
+}
+
+.sinopsis img {
+  float: left;
+  box-sizing: border-box;
+  width: 45%;
+  height: auto;
+  margin: 0px 40px 20px 0px;
+  border: 10px solid white;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.sinopsis h3 {
+  margin: 0px 0px 24px;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.sinopsis p {
+  line-height: 1.6;
+}
+
+/* Art */
+.art {
+  padding: 60px 0px;
+  overflow: hidden;
+}
+
+.art h2 {
+  margin-left: 12vw;
+}
+
+.art-carousel {
+  display: flex;
+  width: max-content;
+  margin: 0px;
+  padding: 30px 0px;
+  list-style: none;
+}
+
+.art-carousel li {
+  width: 450px;
+  margin-right: 24px;
+}
+
+.art-carousel figure {
+  margin: 0px;
+}
+
+.art-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 1038;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.art-carousel img:hover {
+  transform: scale(1.08);
+}
+
+/* Main Characters */
+.main-characters {
+  padding: 60px 12vw;
 }
 
 .character {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 50px;
+  gap: 60px;
+  margin-bottom: 80px;
 }
 
 .character-img {
   background: white;
   padding: 10px 10px 25px 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transform: rotate(-3deg); /* Inclina la tarjeta ligeramente */
+  transform: rotate(-3deg);
   flex-shrink: 0;
 }
 
@@ -137,77 +258,102 @@
 
 .character-img img {
   display: block;
-  width: 200px;
+  width: 240px;
   height: auto;
 }
 
 .character-info {
-  flex-grow: 1;
+  max-width: 720px;
+  padding-left: 20px;
+  border-left: 2px solid #bbe5f2;
 }
 
 .character-info h3 {
+  margin: 0px 0px 6px;
   font-size: 1.8rem;
   border-bottom: 2px solid #33a6cc;
   padding-bottom: 5px;
-  margin-bottom: 10px;
+}
+
+.character-info h3 [lang="ja"] {
+  font-size: 1rem;
 }
 
 .character-age {
-  color: #d97706;
+  color: #b45309;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 0px 0px 6px;
   border-bottom: 1px dashed #bbe5f2;
   padding-bottom: 5px;
 }
 
 .character-info p {
+  margin: 0px 0px 6px;
   border-bottom: 1px solid #bbe5f2;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
+  padding-bottom: 6px;
   line-height: 1.6;
 }
 
-/* --- Estilos para la sección de Also In the Film (Panel de personajes) --- */
+/* Also in the film */
 .other-characters {
-  text-align: center;
-  margin: 60px 0;
+  padding: 60px 12vw;
 }
 
-.other-characters h2 {
-  font-size: 2.2rem;
-  font-family: serif;
-  margin-bottom: 25px;
-  color: #222;
+.other-characters-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
-.other-characters-panel {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 15px;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.other-characters-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 0px 6px 14px;
+  border-left: 2px solid #bbe5f2;
+  border-bottom: 1px solid #bbe5f2;
 }
 
-.other-characters-panel img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 4px;
+.other-characters-list img {
+  flex-shrink: 0;
+  width: 44px;
+  height: 60px;
+  object-fit: cover;
+  padding: 4px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.other-characters-list h3 {
+  margin: 0px 0px 2px;
+  font-size: 1.15rem;
+}
+
+.other-characters-list p {
+  margin: 0px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Ending */
 .movie-outro {
   text-align: center;
   padding: 60px 20px;
-  margin-top: 40px;
 }
 
-.outro-image img {
+.outro-image {
   max-width: 650px;
-  width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 2160 / 1215;
   margin: 0 auto;
+  background-image:
+    linear-gradient(to right, white, transparent 25%, transparent 75%, white),
+    linear-gradient(to bottom, white, transparent 25%, transparent 75%, white),
+    url("/img/silentvoice/extra/w_x1wpl3.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .outro-title {
@@ -220,9 +366,10 @@
 }
 
 .outro-title p {
-  font-family: serif;
+  font-family: "Alegreya", serif;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 2rem;
+  font-weight: bold;
   color: #333;
   margin-top: 5px;
 }
@@ -236,9 +383,9 @@
   background-color: #8ac3ed;
   color: #111;
   padding: 12px 30px;
-  border-radius: 30px; /* Forma de píldora */
+  border-radius: 30px;
   text-decoration: none;
-  font-family: serif;
+  font-family: "Alegreya", serif;
   font-size: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.2s ease, transform 0.1s ease;

@@ -12,7 +12,7 @@ h3 {
   font-family: "Alegreya", serif;
 }
 
-/* Title  */
+/* Title */
 .hero h1 {
   margin: 20px 0px 0px 30px;
   font-weight: normal;
@@ -36,35 +36,28 @@ h3 {
   padding-left: 1em;
 }
 
-/*  Stars */
+/* Stars */
 .stars {
   margin-right: 10px;
-  background: linear-gradient(
-    to right,
-    orange calc(var(--rating) * 1%),
-    grey calc(var(--rating) * 1%)
-  );
-  background-clip: text;
-  color: transparent;
-  text-shadow: none;
+  color: orange;
 }
 .hero {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
   grid-template-areas:
     "nav     ."
     "title   poster"
     "reviews poster"
     "info    .";
-  max-height: 70vh;
+  min-height: 85vh;
   width: 100%;
   background-image:
-    linear-gradient(to left, transparent 30%, rgb(0 0 0 / 0.65)),
-    url(../img/howls/s049.jpg);
+    linear-gradient(to left, transparent 30%, rgba(0, 0, 0, 0.65)),
+    url(/img/howls/s049.jpg);
   background-size: cover;
   background-position: center;
-  text-shadow: 0px 1px 8px rgb(0 0 0 / 0.6);
+  text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero > .navigation {
@@ -72,6 +65,7 @@ h3 {
 }
 .hero > h1 {
   grid-area: title;
+  align-self: end;
 }
 .hero > .poster {
   grid-area: poster;
@@ -105,15 +99,19 @@ h3 {
 }
 
 /* Navigation */
+.navigation {
+  text-shadow: none;
+}
+
 .navigation ul {
   display: flex;
   width: fit-content;
   gap: 4px;
-  margin: 10px 10px;
+  margin: 20px 30px;
   padding: 4px;
   list-style: none;
-  background-color: #14244f;
-  border: 1px solid #3a4f86;
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 999px;
 }
 
@@ -121,13 +119,13 @@ h3 {
   display: block;
   padding: 10px 20px;
   border-radius: 999px;
-  color: white;
+  color: #111;
   text-decoration: none;
 }
 
 .navigation [aria-current="page"] {
-  background-color: white;
-  color: #14244f;
+  background-color: #111;
+  color: white;
 }
 
 .scores,
@@ -148,7 +146,7 @@ h3 {
   flex-direction: column-reverse;
 }
 
-/* Scores and facts text */
+/* Scores */
 .scores dd {
   font-family: "Alegreya", serif;
   font-size: 2rem;
@@ -165,35 +163,30 @@ h3 {
 }
 
 h2 {
-  margin: 0px 0px 30px 70px;
+  margin: 0px 0px 30px;
   font-weight: normal;
   font-size: 2.5rem;
 }
 
 /* Sinopsis */
 .sinopsis {
-  padding: 40px 0px;
+  padding: 60px 12vw;
   background-color: #2b5fa8;
 }
 
 .sinopsis > div {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  padding: 0px 70px;
+  display: flow-root;
 }
 
 .sinopsis img {
+  float: left;
   box-sizing: border-box;
-  width: 50%;
+  width: 45%;
   height: auto;
+  margin: 0px 40px 20px 0px;
   border: 10px solid #1d4277;
   border-radius: 12px;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-.sinopsis > div > div {
-  flex: 1;
 }
 
 .sinopsis h3 {
@@ -207,11 +200,15 @@ h2 {
   line-height: 1.6;
 }
 
-/* Art Oficial */
+/* Art */
 .art {
-  padding: 40px 0px;
+  padding: 60px 0px;
   background-color: #5a1a1a;
   overflow: hidden;
+}
+
+.art h2 {
+  margin-left: 12vw;
 }
 
 .art-carousel {
@@ -245,7 +242,7 @@ h2 {
 
 /* Main Characters */
 .main-characters {
-  padding: 40px 0px;
+  padding: 60px 12vw;
   background-color: #1b5e20;
 }
 
@@ -254,7 +251,6 @@ h2 {
   align-items: center;
   gap: 60px;
   margin: 0px 0px 80px;
-  padding: 0px 70px;
 }
 
 .character.reverse {
@@ -317,54 +313,10 @@ h2 {
   line-height: 1.6;
 }
 
-/* Small screens */
-@media (max-width: 800px) {
-  .title-en {
-    font-size: 3.5rem;
-  }
-
-  .character,
-  .character.reverse {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    padding: 0px 20px;
-  }
-
-  .character > div {
-    width: auto;
-  }
-
-  .sinopsis > div {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0px 20px;
-  }
-
-  .sinopsis img {
-    width: 100%;
-  }
-
-  .character.reverse {
-    text-align: left;
-  }
-
-  .character.reverse dl {
-    justify-content: flex-start;
-  }
-
-  .supporting-characters ul {
-    padding: 0px 20px;
-  }
-
-  h2 {
-    margin-left: 20px;
-  }
-}
 
 /* Also in the film */
 .supporting-characters {
-  padding: 40px 0px;
+  padding: 60px 12vw;
   background-color: #1b5e20;
 }
 
@@ -374,18 +326,18 @@ h2 {
   justify-content: space-between;
   gap: 30px;
   margin: 0px;
-  padding: 0px 70px;
+  padding: 0px;
   list-style: none;
 }
 
 .supporting-characters li {
-  width: 220px;
+  width: 180px;
 }
 
 .supporting-characters img {
   display: block;
-  width: 220px;
-  height: 290px;
+  width: 180px;
+  height: 238px;
   object-fit: cover;
   border-radius: 999px 999px 0px 0px;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
@@ -411,7 +363,7 @@ h2 {
 .ending {
   padding: 200px 20px;
   text-align: center;
-  background-image: url(../img/howls/s050.jpg);
+  background-image: url(/img/howls/s050.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -421,7 +373,7 @@ h2 {
   font-size: 3rem;
   font-weight: 700;
   text-shadow:
-    0 0 20px rgb(0 0 0 / 0.9),
+    0 0 20px rgba(0, 0, 0, 0.9),
     0 0 40px black,
     0 0 80px black;
 }

@@ -3,31 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <title>A Silent Voice</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;1,400;1,700&family=Alegreya+Sans&family=Noto+Serif+JP:wght@700&display=swap" />
     <link rel="stylesheet" href="/silentvoice/silentvoice.css" />
   </head>
   <body>
     <script type="module" src="/silentvoice/silentvoice.ts"></script>
 
     <header class="hero">
-      <nav>
+      <nav class="navigation">
         <ul>
-          <li><a href="/silentvoice/">A silent voice</a></li>
           <li><a href="/howls/">Howl's Moving Castle</a></li>
+          <li><a href="/silentvoice/" aria-current="page">A Silent Voice</a></li>
+          <li><a href="/comparison/">Comparació</a></li>
         </ul>
       </nav>
 
       <h1>
-        <span lang="ja">聲の形 </span><br />A Silent Voice
+        <span lang="ja">聲の形</span>
+        A Silent Voice
       </h1>
+
+      <div class="poster">
+        <img src="/img/silentvoice/poster.jpg" width="460" height="651" alt="Pòster de A Silent Voice" />
+      </div>
+
       <dl class="scores">
-        <dt>Nota mitjana</dt>
-          <dd>
-            <span class="stars" style="--rating: 85">★★★★★</span> 88 / 100
-          </dd>
-        <dt>Película Millor Valorada a AniList</dt>
-        <dd>#4</dd>
+        <div>
+          <dt>Nota mitjana</dt>
+          <dd><span class="stars" aria-hidden="true">★★★★☆</span> 88 / 100</dd>
+        </div>
+        <div>
+          <dt>Pel·lícula Millor Valorada a AniList</dt>
+          <dd>#4</dd>
+        </div>
       </dl>
+
       <dl class="facts">
         <div>
           <dt>Director</dt>
@@ -39,7 +50,7 @@
         </div>
         <div>
           <dt>Estrena</dt>
-          <dd>17 de septembre de 2016</dd>
+          <dd>17 de setembre de 2016</dd>
         </div>
         <div>
           <dt>Durada</dt>
@@ -47,91 +58,150 @@
         </div>
         <div>
           <dt>Música</dt>
-          <dd>kensuke Ushio</dd>
+          <dd>Kensuke Ushio</dd>
         </div>
       </dl>
     </header>
 
-    <section>
+    <section class="sinopsis">
       <h2>Sinopsis</h2>
-      
+      <div>
+        <img src="/img/silentvoice/stills/still15.jpg" width="1998" height="1080" alt="La Shoko, ja adolescent, dreta a la porta de l'aula amb la llum de la tarda" />
+        <div>
+          <h3>Mirar els altres a la cara</h3>
+          <p>Quan la Shoko Nishimiya, una nena sorda, arriba a la seva nova escola, en Shoya Ishida la converteix en la seva diana: li arrenca els audiòfons, se'n riu davant de tothom i la classe ho deixa passar. Quan la mare de la Shoko denuncia l'assetjament, el mestre i els companys l'assenyalen només a ell, i en Shoya passa de botxí a marginat. Cinc anys després, sol i decidit a acabar amb la seva vida, aprèn la llengua de signes i va a buscar la Shoko per demanar-li perdó.</p>
+          <p>La pel·lícula no tracta la redempció com un premi, sinó com una feina de cada dia. En Shoya camina amb el cap cot, mirant els peus de la gent, i veu una creu blava damunt la cara de tothom qui l'envolta. La crítica n'ha destacat que no busca excuses per a la crueltat dels nens, i que mostra l'assetjament amb una duresa poc habitual en l'animació, tot i que a alguns els costa posar-se de part d'un protagonista que ha fet tant de mal.</p>
+          <p>La directora Naoko Yamada, de Kyoto Animation, adapta el manga de Yoshitoki Ōima amb una contenció que alguns crítics han comparat amb la d'Ozu: la pel·lícula prefereix xiuxiuejar una vegada que cridar-ne dues. Les mans que signen estan animades amb una cura extrema, i la música de Kensuke Ushio, de piano suau i silencis, fa que el silenci pesi tant com el so, i la veu de la Shoko, de Saori Hayami, és dolorosament creïble. L'únic retret és que la trama s'embussa per encabir-hi set volums de manga.</p>
+          <p>Al centre de tot hi ha el perdó, i sobretot el que cal donar-se a un mateix. La Shoko també es culpa de tot el que passa al seu voltant, i el seu intent de suïcidi obliga en Shoya a deixar de viure tancat en la seva culpa. Quan per fi es destapa les orelles i les creus cauen, escolta per primer cop les veus dels altres. Per a molts crítics, és una de les millors pel·lícules d'animació japonesa de la dècada.</p>
+        </div>
+      </div>
     </section>
 
     <section class="art">
       <h2>Art Oficial</h2>
-        <ul class="art-carousel">
-          <li>
-            <figure>
-              <img
-                src="/img/silentvoice/w_5d6r77.png"
-                width="500"
-                height="300"
-                alt="The shape of voice Crying"
-              />
-            </figure>
-          </li>
-        </ul>
+      <ul class="art-carousel">
+        <li><figure><img src="/img/silentvoice/stills/still01.jpg" width="1498" height="971" alt="En Shoya allarga la mà cap a la Shoko sota el cel blau" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still03.jpg" width="1998" height="1080" alt="La Shoko de petita somriu davant la pissarra" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still04.jpg" width="1998" height="1080" alt="En Shoya de petit a classe" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still05.jpg" width="1998" height="1080" alt="La Shoko a la porta de l'aula" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still07.jpg" width="1998" height="1080" alt="Els companys de classe amb creus blaves a la cara" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still08.jpg" width="1998" height="1080" alt="Primer pla dels ulls plorosos de la Shoko" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still09.jpg" width="1998" height="1080" alt="En Shoya mirant el cel" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still14.jpg" width="1998" height="1080" alt="L'aula de primària plena d'alumnes" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still16.jpg" width="1998" height="1080" alt="En Shoya al passadís de l'institut" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still17.jpg" width="1998" height="1080" alt="Les mans d'en Shoya juntes" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still21.jpg" width="1998" height="1080" alt="Nens en bicicleta pel camp" /></figure></li>
+        <li><figure><img src="/img/silentvoice/stills/still22.jpg" width="1998" height="1080" alt="El riu ple de cirerers en flor" /></figure></li>
+      </ul>
     </section>
+
     <section class="main-characters">
-      <h2>Main Characters</h2>
+      <h2>Personatges Principals</h2>
 
       <article class="character">
         <div class="character-img">
           <img src="/img/silentvoice/chars/shouya-ishida.png" width="230" height="345" alt="Shoya Ishida" />
         </div>
         <div class="character-info">
-          <h3>Shoya Ishida</h3>
+          <h3>Shoya Ishida <span lang="ja">石田将也</span></h3>
           <p class="character-age">Edat: 18 (12 al inici)</p>
-          <p>Va ser una vegada l'assetjament de Shōko Nishimiya durant el sisè grau, fet que creix per lamentar-se profundament i lluita per complir-se, ja que fa amistat amb Shōko diversos anys després. Shōya intenta superar el seu propi odi i els seus dubtes, ja que la seva amistat con Shōko continua florint, reunint nous i vells amics al llarg del camí. Tot i això, es veu obligat a afrontar els pitjors aspectes d'ells i d'ell mateix, creant finalment bons que l'empenyen a ser una persona millor.</p>
+          <p>Va ser una vegada l'assetjament de Shoko Nishimiya durant el sisè grau, fet que creix per lamentar-se profundament i lluita per complir-se, ja que fa amistat amb Shoko diversos anys després.</p>
+          <p>Shoya intenta superar el seu propi odi i els seus dubtes, ja que la seva amistat con Shoko continua florint, reunint nous i vells amics al llarg del camí.</p>
+          <p>Tot i això, es veu obligat a afrontar els pitjors aspectes d'ells i d'ell mateix, creant finalment bons que l'empenyen a ser una persona millor.</p>
         </div>
       </article>
 
       <article class="character">
         <div class="character-img">
-          <img src="/img/silentvoice/chars/shouko-nishimiya.png" width="230" height="346" alt="Shoko Nishimiya" />
+          <img src="/img/silentvoice/chars/shouko-nishimiya.png" width="230" height="345" alt="Shoko Nishimiya" />
         </div>
         <div class="character-info">
-          <h3>Shoko Nishimiya</h3>
+          <h3>Shoko Nishimiya <span lang="ja">西宮硝子</span></h3>
           <p class="character-age">Edat: 18 (12 al inici)</p>
-          <p>Nascut majoritàriament sord, Shōko sovint s'enfronta a dificultats per comunicar-se i connectar-se amb d'altres, provocant els seus problemes durant la seva infantesa. En particular amb Shōya Ishida, que es va convertir en el seu mató durant el sisè grau. Quan Shōya torna a la seva vida cinc anys després, Shōko accepta la seva amistat i comença a experimentar la connexió amb els altres que ha volgut durant tant de temps. Tanmateix, el trauma del seu passat provoca la seva auto-lluita i tendència a culpar-se de revelar-se. Malgrat això, Shōko comença a aprendre el valor de la seva vida amb l'ajuda de Shōya, a més d'ajudar-lo a assolir el valor seu.</p>
+          <p>Nascuda majoritàriament sorda, la Shoko sovint s'enfronta a dificultats per comunicar-se i connectar-se amb d'altres, provocant els seus problemes durant la seva infantesa. En particular amb Shoya Ishida, que es va convertir en el seu mató durant el sisè grau.</p>
+          <p>Quan Shoya torna a la seva vida cinc anys després, Shoko accepta la seva amistat i comença a experimentar la connexió amb els altres que ha volgut durant tant de temps.</p>
+          <p>Tanmateix, el trauma del seu passat provoca la seva auto-lluita i tendència a culpar-se de revelar-se. Malgrat això, Shoko comença a aprendre el valor de la seva vida amb l'ajuda de Shoya, a més d'ajudar-lo a assolir el valor seu.</p>
         </div>
       </article>
 
       <article class="character">
         <div class="character-img">
-          <img src="/img/silentvoice/chars/yuzuru-nishimiya.jpg" width="230" height="345" alt="Yuzuru Nishimiya"/>
+          <img src="/img/silentvoice/chars/yuzuru-nishimiya.jpg" width="230" height="358" alt="Yuzuru Nishimiya" />
         </div>
         <div class="character-info">
-          <h3>Yuzuru Nishimiya</h3>
+          <h3>Yuzuru Nishimiya <span lang="ja">西宮結絃</span></h3>
           <p class="character-age">Edat: 16 (14 a la primera aparició)</p>
-          <p>És la néta d'Ito Nishimiya, la més jove de les dues filles de Yaeko Nishimiya i la germana petita de Shōko Nishimiya. Yuzuru és estudiant de secundària de tercer any (9è grau), però rarament assisteix i en canvi fa fotos amb la càmera de la ciutat.</p>
+          <p>És la néta d'Ito Nishimiya, la més jove de les dues filles de Yaeko Nishimiya i la germana petita de Shoko Nishimiya.</p>
+          <p>Yuzuru és estudiant de secundària de tercer any (9è grau), però rarament assisteix i en canvi fa fotos amb la càmera de la ciutat.</p>
         </div>
       </article>
 
       <article class="character">
         <div class="character-img">
-          <img src="/img/silentvoice/chars/tomohiro-nagatsuka.jpg" width="230" height="345" alt="Tomohiro Nagatsuka"/>
+          <img src="/img/silentvoice/chars/tomohiro-nagatsuka.jpg" width="230" height="358" alt="Tomohiro Nagatsuka" />
         </div>
         <div class="character-info">
-          <h3>Tomohiro Nagatsuka</h3>
+          <h3>Tomohiro Nagatsuka <span lang="ja">永束友宏</span></h3>
           <p class="character-age">Edat: 18</p>
-          <p>És una de les primeres persones a obtenir la confiança de Shōya Ishida i s'ha de trucar ràpidament a ell un millor amic. Té aspiracions a convertir-se en cineasta i persegueix els seus objectius amb passió sincera.</p>
+          <p>És una de les primeres persones a obtenir la confiança de Shoya Ishida i s'ha de trucar ràpidament a ell un millor amic.</p>
+          <p>Té aspiracions a convertir-se en cineasta i persegueix els seus objectius amb passió sincera.</p>
         </div>
       </article>
     </section>
+
     <section class="other-characters">
-      <h2>Also In the Film</h2>
-      <article class="other-characters-panel">
-        <img src="/img/silentvoice/chars/extra/panel-others.png" alt="Panel Otros Personajes">
-      </article>
+      <h2>Altres Personatges</h2>
+      <ul class="other-characters-list">
+        <li>
+          <img src="/img/silentvoice/chars/naoka-ueno.jpg" width="230" height="358" alt="Naoka Ueno" />
+          <div>
+            <h3>Naoka Ueno</h3>
+            <p>Antiga companya de primària d'en Shoya, que encara guarda rancor a la Shoko.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/img/silentvoice/chars/miki-kawai.jpg" width="230" height="358" alt="Miki Kawai" />
+          <div>
+            <h3>Miki Kawai</h3>
+            <p>Antiga delegada de classe, que sempre vol quedar bé davant dels altres.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/img/silentvoice/chars/satoshi-mashiba.jpg" width="230" height="358" alt="Satoshi Mashiba" />
+          <div>
+            <h3>Satoshi Mashiba</h3>
+            <p>Company d'institut d'en Shoya i de la Kawai, que no suporta els assetjadors.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/img/silentvoice/chars/miyoko-sahara.jpg" width="230" height="358" alt="Miyoko Sahara" />
+          <div>
+            <h3>Miyoko Sahara</h3>
+            <p>Companya de primària que va aprendre la llengua de signes per parlar amb la Shoko.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/img/silentvoice/chars/miyako-ishida.jpg" width="230" height="358" alt="Miyako Ishida" />
+          <div>
+            <h3>Miyako Ishida</h3>
+            <p>Mare d'en Shoya, que porta una perruqueria a casa.</p>
+          </div>
+        </li>
+        <li>
+          <img src="/img/silentvoice/chars/yaeko-nishimiya.jpg" width="230" height="358" alt="Yaeko Nishimiya" />
+          <div>
+            <h3>Yaeko Nishimiya</h3>
+            <p>Mare de la Shoko i la Yuzuru, estricta i molt protectora.</p>
+          </div>
+        </li>
+      </ul>
     </section>
+
     <section class="movie-outro">
-      <div class="outro-image">
-        <img src="/img/silentvoice/extra/w_x1wpl3.png" alt="A Silent Voice Bridge" />
-      </div>
+      <div class="outro-image"></div>
       <div class="outro-title">
         <span lang="ja">聲の形</span>
-        <p>“Koe no Katachi. The shape of a voice.”</p>
+        <p>«Koe no Katachi. La forma d'una veu.»</p>
       </div>
       <div class="outro-button-container">
         <a href="/howls/" class="outro-btn">Howl's Moving Castle</a>
